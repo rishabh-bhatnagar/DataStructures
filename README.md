@@ -34,3 +34,12 @@ In this repository all types of Data Structures are implemented in various langu
 - [segment_tree.js](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/JavaScript/segment_tree.js)
 - [segment_tree.rb](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/Ruby/segment_tree.rb)
 - [segment_tree.ts](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/TypeScript/segment_tree.ts)
+
+#### 4. Binary Search Tree
+- [BST.java](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/Java/BST.java)
+- [bst.py](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/Python/bst.py)
+- [bst.js](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/JavaScript/bst.js)
+
+#### 5. van Emde Boas Tree
+- [VanEmdeBoas.java](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/Java/VanEmdeBoas.java)
+- [van_emde_boas.py](https://github.com/rishabh-bhatnagar/DataStructures/blob/master/Python/van_emde_boas.py)
