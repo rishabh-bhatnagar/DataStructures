@@ -3,6 +3,10 @@
 //
 
 #include <iostream>
+#include<vector>
+#include <queue>
+
+#define PB push_back
 
 using namespace ::std;
 
@@ -63,6 +67,27 @@ class BST {
         }
     }
 
+    void inorder(Node *root, vector<int> &ret) {
+        if (!root) return;
+        inorder(root->left, ret);
+        ret.PB(root->data);
+        inorder(root->right, ret);
+    }
+
+    void preorder(Node *root, vector<int> &ret) {
+        if (!root) return;
+        ret.PB(root->data);
+        preorder(root->left, ret);
+        preorder(root->right, ret);
+    }
+
+    void postorder(Node *root, vector<int> &ret) {
+        if (!root) return;
+        postorder(root->left, ret);
+        postorder(root->right, ret);
+        ret.PB(root->data);
+    }
+
 public:
     Node *root;
 
@@ -80,6 +105,39 @@ public:
 
     Node *search(int data) {
         return search(root, data);
+    }
+
+    vector<int> inorder() {
+        vector<int> ret;
+        inorder(root, ret);
+        return ret;
+    }
+
+    vector<int> preorder() {
+        vector<int> ret;
+        preorder(root, ret);
+        return ret;
+    }
+
+    vector<int> postorder() {
+        vector<int> ret;
+        postorder(root, ret);
+        return ret;
+    }
+
+    vector<int> levelorder() const {
+        deque<Node *> q;
+        vector<int> ret;
+        q.PB(root);
+        while (!q.empty()) {
+            Node *last = q.front();
+            q.pop_front();
+            if (!last) continue;
+            q.PB(last->left);
+            q.PB(last->right);
+            ret.PB(last->data);
+        }
+        return ret;
     }
 };
 
